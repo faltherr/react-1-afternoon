@@ -40,15 +40,14 @@ class FilterObject extends Component{
                 filteredArray.push(unFilter[i])
             }
         }
-        this.setState({filteredArray : filteredArray})//Not functioning? check out protocol determining this usability
-
+        this.setState({filteredArray : filteredArray})
     }
 
 
 
     render(){
         return(
-            <div className="puzzleBox filterObjectPB">
+        <div className="puzzleBox filterObjectPB">
             <h4>Filter Element</h4>
                 <span className="puzzleText"> Original Array: {JSON.stringify(this.state.unFilteredArray, null, 10)} </span>
                 <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
